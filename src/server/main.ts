@@ -2,6 +2,7 @@ import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { HandlerRegistry } from "./registry.js";
 import { NavigationHandler } from "./handlers/navigation.js";
+import { SearchHandler } from "./handlers/search.js";
 
 export class MapboxServer {
   private server: Server;
@@ -25,10 +26,11 @@ export class MapboxServer {
   }
 
   private initializeHandlers() {
-    // 注册所有业务处理器
+    // Register all handlers
     this.registry.register(new NavigationHandler());
+    this.registry.register(new SearchHandler());
 
-    // 注册到服务器
+    // Register all handlers to the server
     this.registry.registerAll(this.server);
   }
 
