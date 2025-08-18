@@ -18,7 +18,8 @@
   "scripts": {
     "dev": "npx @smithery/cli dev",
     "build": "npx @smithery/cli build",
-    "start": "node .smithery/index.cjs"
+    "compile": "tsc -p tsconfig.json",
+    "start": "npm run compile && node dist/src/index.js"
   },
   "keywords": ["mapbox", "mcp", "server", "mapbox-mcp-server"],
   "author": "AidenYangX",
