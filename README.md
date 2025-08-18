@@ -7,6 +7,8 @@
 
 # Mapbox MCP Server
 
+[![smithery badge](https://smithery.ai/badge/mapbox-mcp-server)](https://smithery.ai/server/mapbox-mcp-server)
+
 MCP Server for the Mapbox API.
 
 ## Features
@@ -89,6 +91,14 @@ Add this configuration to your Claude Desktop config file (typically located at 
 ```
 
 ## Setup
+
+### Installing via Smithery
+
+To install mapbox-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ngoiyaeric/mapbox-mcp-server):
+
+```bash
+npx -y @smithery/cli install mapbox-mcp-server --client claude
+```
 
 ### Prerequisites
 

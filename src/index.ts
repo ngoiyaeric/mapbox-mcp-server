@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+import "dotenv/config";
 /*
  * @Author: AidenYangX
  * @Email: xscs709560271@gmail.com
