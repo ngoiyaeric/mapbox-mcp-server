@@ -4,7 +4,6 @@
  * @Date: 2024-12-21 23:54:22
  * @Description: Base Handler
  */
-import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { IHandler } from "../registry.js";
 import { Tool } from "@modelcontextprotocol/sdk/types.js";
 

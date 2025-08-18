@@ -1,35 +1,36 @@
 {
   "name": "mapbox-mcp-server",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
+  "module": "./src/index.ts",
+  "main": "./dist/src/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "types": "./dist/src/index.d.ts",
   "bin": {
-    "mapbox": "./build/index.js"
+    "mapbox": "./dist/src/index.js"
   },
-  "files": [
-    "build"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\""
+    "dev": "npx @smithery/cli dev",
+    "build": "npx @smithery/cli build",
+    "start": "node .smithery/index.cjs"
   },
-  "keywords": [
-    "mapbox",
-    "mcp",
-    "server",
-    "mapbox-mcp-server"
-  ],
+  "keywords": ["mapbox", "mcp", "server", "mapbox-mcp-server"],
   "author": "AidenYangX",
   "license": "MIT",
   "description": "Mapbox integration for MCP servers",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.4",
-    "dotenv": "^16.4.7",
-    "node-fetch": "^3.3.2",
-    "zod": "^3.24.1"
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "dotenv": "^16.4.7"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "@smithery/cli": "^1.2.17"
   }
 }

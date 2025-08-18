@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*
  * @Author: AidenYangX
  * @Email: xscs709560271@gmail.com
