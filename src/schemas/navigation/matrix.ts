@@ -28,7 +28,7 @@ export const MatrixArgsSchema = z.object({
     .max(25)
     .describe("Array of coordinates"),
   profile: z
-    .enum(["driving", "walking", "cycling"])
+    .enum(["driving-traffic", "driving", "walking", "cycling"])
     .default("driving")
     .describe("Navigation mode"),
   annotations: z

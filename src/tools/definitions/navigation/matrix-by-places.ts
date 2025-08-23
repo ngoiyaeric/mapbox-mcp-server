@@ -26,7 +26,7 @@ export const MATRIX_BY_PLACES_TOOL: Tool = {
       profile: {
         type: "string",
         description: "Navigation mode",
-        enum: ["driving", "walking", "cycling"],
+        enum: ["driving-traffic", "driving", "walking", "cycling"],
         default: "driving",
       },
       annotations: {

@@ -10,7 +10,7 @@ import { z } from "zod";
 export const MatrixByPlacesArgsSchema = z.object({
   places: z.array(z.string()).min(2).max(25).describe("Array of place names"),
   profile: z
-    .enum(["driving", "walking", "cycling"])
+    .enum(["driving-traffic", "driving", "walking", "cycling"])
     .default("driving")
     .describe("Navigation mode"),
   annotations: z
